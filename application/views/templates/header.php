@@ -13,7 +13,8 @@
         }
         .description
         {
-            height: 10em;
+            padding-top: 5em;
+            padding-bottom: 5em;
         }
     </style>
     <title>Home</title>

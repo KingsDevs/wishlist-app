@@ -17,4 +17,14 @@ class Home extends CI_Controller
         $this->load->view('templates\footer.php');
     }
 
+    public function store_data()
+    {
+        $wishlist_datas[] = array();
+        $wishlist_datas['date'] = $this->input->post('date');
+        $wishlist_datas['title'] = $this->input->post('title');
+        $wishlist_datas['description'] = $this->input->post('description');
+
+        var_dump($wishlist_datas);
+    }
+
 }
