@@ -6,7 +6,7 @@ class Home extends CI_Controller
     public function index()
     {
         $this->load->model('WishlistModel');
-        $wishlist_datas['wishlist'] = $this->WishlistModel->get_last_ten_entries();
+        $wishlist_datas['wishlist'] = $this->WishlistModel->get_last_entries();
 
         $this->load->view('templates\header.php', $wishlist_datas);
         $this->load->view('home\index.php');

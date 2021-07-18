@@ -7,9 +7,9 @@ class WishlistModel extends CI_Model
         return $this->db->insert('wishlist', $datas);
     }
 
-    public function get_last_ten_entries()
+    public function get_last_entries()
     {
-        $query = $this->db->get('wishlist', 10);
+        $query = $this->db->get('wishlist', 20);
         return $query->result();
     }
 
