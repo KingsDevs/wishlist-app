@@ -22,7 +22,13 @@
                         </thead>
                         
                         <tbody>
-                            
+                            <?php foreach($wishlist as $wd) : ?>
+                            <tr>
+                                <td> <?=$wd->date; ?></td>
+                                <td> <?=$wd->title; ?></td>
+                                <td> <?=$wd->description; ?></td>
+                            </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

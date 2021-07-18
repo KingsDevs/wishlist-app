@@ -5,7 +5,10 @@ class Home extends CI_Controller
 {
     public function index()
     {
-        $this->load->view('templates\header.php');
+        $this->load->model('WishlistModel');
+        $wishlist_datas['wishlist'] = $this->WishlistModel->get_last_ten_entries();
+
+        $this->load->view('templates\header.php', $wishlist_datas);
         $this->load->view('home\index.php');
         $this->load->view('templates\footer.php');
     }
@@ -19,12 +22,18 @@ class Home extends CI_Controller
 
     public function store_data()
     {
-        $wishlist_datas[] = array();
-        $wishlist_datas['date'] = $this->input->post('date');
-        $wishlist_datas['title'] = $this->input->post('title');
-        $wishlist_datas['description'] = $this->input->post('description');
+        $wishlist_datas =
+        [
+            'date' => $this->input->post('date'),
+            'title' => $this->input->post('title'),
+            'description' => $this->input->post('description')
+            
+        ];
+        
 
-        var_dump($wishlist_datas);
+        $this->load->model('WishlistModel');
+        $this->WishlistModel->insert_data($wishlist_datas);
+        $this->index();
     }
 
 }
