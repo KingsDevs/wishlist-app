@@ -34,7 +34,7 @@
             padding-bottom: 5em;
         }
     </style>
-    <title>Home</title>
+    <title>Wishlist App</title>
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
