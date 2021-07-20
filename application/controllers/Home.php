@@ -33,7 +33,12 @@ class Home extends CI_Controller
 
         $this->load->model('WishlistModel');
         $this->WishlistModel->insert_data($wishlist_datas);
-        $this->index();
+        redirect('home');
+    }
+
+    public function edit_data()
+    {
+
     }
 
 }

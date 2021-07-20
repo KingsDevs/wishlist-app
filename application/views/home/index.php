@@ -1,5 +1,5 @@
 
-<h5 class="label">Your wishlist</h5>
+<h5 class="label container">Your wishlist</h5>
 
 <div class="container">
     <div class="row">
@@ -27,6 +27,7 @@
                                 <td> <?=$wd->date; ?></td>
                                 <td> <?=$wd->title; ?></td>
                                 <td> <?=$wd->description; ?></td>
+                                <td><a href="#" class="btn btn-primary">Edit</a></td>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>

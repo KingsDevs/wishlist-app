@@ -26,13 +26,8 @@
         .label
         {
             margin-top: 3em;
-            margin-left: 5em;
         }
-        .description
-        {
-            padding-top: 5em;
-            padding-bottom: 5em;
-        }
+        
     </style>
     <title>Wishlist App</title>
 </head>

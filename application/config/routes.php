@@ -56,4 +56,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'Home/index';
 $route['addwish'] = 'Home/add_wish';
 $route['submit'] = 'Home/store_data';
+$route['edit'] = 'Home/edit_data';
 

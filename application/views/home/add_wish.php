@@ -1,4 +1,4 @@
-<h5 class="label">Add Wish</h5>
+<h5 class="label container">Add Wish</h5>
 
 <div class="container">
     <div class="row">
@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="">Date</label>
-                            <input type="date" class="form-control" name="date">
+                            <input type="date" class="form-control" name="date" value="<?php echo date('Y-m-d'); ?>">
                         </div>
 
                         <div class="form-group">
@@ -23,7 +23,7 @@
 
                         <div class="form-group">
                             <label for="">Desription</label>
-                            <input type="text" class="form-control description" name="description">
+                            <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Your description"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary float-start">Submit</a>
                     </div>
