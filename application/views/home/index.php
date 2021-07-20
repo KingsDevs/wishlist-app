@@ -27,7 +27,9 @@
                                 <td> <?=$wd->date; ?></td>
                                 <td> <?=$wd->title; ?></td>
                                 <td> <?=$wd->description; ?></td>
-                                <td><a href="#" class="btn btn-primary">Edit</a></td>
+                                <td><a href="#" class="btn btn-primary">Edit</a>
+                                    <a href="#" class="btn btn-danger">Delete</a>
+                                </td>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>

@@ -13,17 +13,17 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="">Date</label>
-                            <input type="date" class="form-control" name="date" value="<?php echo date('Y-m-d'); ?>">
+                            <input type="date" class="form-control" name="date" value="<?php echo date('Y-m-d'); ?>" required>
                         </div>
 
                         <div class="form-group">
                             <label for="">Title</label>
-                            <input type="text" class="form-control" name="title">
+                            <input type="text" class="form-control" name="title" placeholder="Input title here" required> 
                         </div>
 
                         <div class="form-group">
                             <label for="">Desription</label>
-                            <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Your description"></textarea>
+                            <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Your description(Optional)"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary float-start">Submit</a>
                     </div>
