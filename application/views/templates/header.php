@@ -29,6 +29,7 @@
         }
         
     </style>
+    <link rel="icon" href="/img/wishlist_icon.png">
     <title>Wishlist App</title>
 </head>
 <body>
