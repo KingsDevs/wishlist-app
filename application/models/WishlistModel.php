@@ -13,4 +13,11 @@ class WishlistModel extends CI_Model
         return $query->result();
     }
 
+    public function edit_data($id)
+    {
+        $query = $this->db->get_where('wishlist', ['id'=>$id]);
+        return $query->result();
+
+    }
+
 }

@@ -18,6 +18,7 @@
                                 <th>Date</th>
                                 <th>Title</th>
                                 <th>Description</th>
+                                <th>Edit/Delete</th>
                             </tr>
                         </thead>
                         
@@ -27,7 +28,7 @@
                                 <td> <?=$wd->date; ?></td>
                                 <td> <?=$wd->title; ?></td>
                                 <td> <?=$wd->description; ?></td>
-                                <td><a href="#" class="btn btn-primary">Edit</a>
+                                <td><a href="<?php echo base_url('home/edit/'.$wd->id) ?>" class="btn btn-primary">Edit</a>
                                     <a href="#" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>

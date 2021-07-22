@@ -36,9 +36,11 @@ class Home extends CI_Controller
         redirect('home');
     }
 
-    public function edit_data()
+    public function edit_data($id)
     {
-
+        $this->load->view('templates/header.php');
+        $this->load->view('home/add_wish.php');
+        $this->load->view('templates/footer.php');
     }
 
 }
