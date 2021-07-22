@@ -1,15 +1,14 @@
-<h5 class="label container">Edit Wish</h5>
 
 <div class="container">
     <div class="row">
         <div class="col-md-12 mt-4">
             <div class="card">
                 <div class="card-header">
-                    <h6>Wishlist
+                    <h6>Edit Wish
                         <a href="<?php echo base_url('home') ?>" class="btn btn-danger float-end">Back</a>
                     </h6>
                 </div>
-                <form action="<?php echo base_url('submit') ?>" method="POST">
+                <form action="<?php echo base_url('home/edit/'.$wishlist->id.'/update') ?>" method="POST">
                     <div class="card-body">
                         <div class="form-group">
                             <label for="">Date</label>
@@ -18,14 +17,14 @@
 
                         <div class="form-group">
                             <label for="">Title</label>
-                            <input type="text" class="form-control" name="title" placeholder="Input title here" required> 
+                            <input type="text" class="form-control" name="title" placeholder="Input title here" required value="<?= $wishlist->title?>"> 
                         </div>
 
                         <div class="form-group">
                             <label for="">Desription</label>
-                            <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Your description(Optional)"></textarea>
+                            <textarea name="description" id="" cols="30" rows="10" class="form-control"><?= $wishlist->description?></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary float-start">Submit</a>
+                        <button type="submit" class="btn btn-primary float-start" placeholder="Your description(Optional)">Update</button>
                     </div>
                     
                 </form>

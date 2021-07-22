@@ -57,4 +57,5 @@ $route['home'] = 'Home/index';
 $route['addwish'] = 'Home/add_wish';
 $route['submit'] = 'Home/store_data';
 $route['home/edit/(:any)'] = 'Home/edit_data/$1';
+$route['home/edit/(:any)/update'] = 'Home/update_data/$1';
 

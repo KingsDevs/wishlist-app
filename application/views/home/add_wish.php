@@ -1,11 +1,10 @@
-<h5 class="label container">Add Wish</h5>
 
 <div class="container">
     <div class="row">
         <div class="col-md-12 mt-4">
             <div class="card">
                 <div class="card-header">
-                    <h6>Wishlist
+                    <h6>Add Wish
                         <a href="<?php echo base_url('home') ?>" class="btn btn-danger float-end">Back</a>
                     </h6>
                 </div>
