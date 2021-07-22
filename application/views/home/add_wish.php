@@ -29,16 +29,25 @@
                             <br>
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Add Image</label>
-                                <input class="form-control" type="file" id="formFile" name="wish_img">
+                                <input class="form-control" type="file" id="formFile" name="wish_img" required>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <br>
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">Add Image</label>
+                                <input class="form-control" type="file" id="formFile" name="wish_img" required>
+                            </div>
+                        </div>
+                        
                         <br>
                         <button type="submit" class="btn btn-primary float-start">Submit</a>
                     </div>
                     
                 </form>
 
-                <?php echo $error?>
+                
             </div>
         </div>
     </div>

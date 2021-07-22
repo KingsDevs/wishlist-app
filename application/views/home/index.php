@@ -12,7 +12,7 @@
                     <table class="table table-bordered">
                         <?php foreach($wishlist as $wd) : ?>
                             <div class="card mb-3">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="<?php echo "/uploads/images/".$wd->wish_img ?>" class="card-img-top w-50 p-3" alt="Wish Image">
                                 <div class="card-body">
                                     <h5 class="card-title"><?=$wd->title; ?></h5>
                                     <p class="card-text"><?=$wd->description; ?></p>

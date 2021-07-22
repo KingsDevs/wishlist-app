@@ -32,7 +32,7 @@ class Home extends CI_Controller
         
         $this->load->library('upload', $config);
 
-        if ( ! $this->upload->do_upload('userfile'))
+        if ( ! $this->upload->do_upload('wish_img'))
         {
             $error = array('error' => $this->upload->display_errors());
             $this->load->view('templates\header.php');
@@ -42,17 +42,17 @@ class Home extends CI_Controller
         else
         {
             $data = array('upload_data' => $this->upload->data());
-            echo $data;
-            // $wishlist_datas =
-            // [
-            //     'date' => $this->input->post('date'),
-            //     'title' => $this->input->post('title'),
-            //     'description' => $this->input->post('description')
+            $wishlist_datas =
+            [
+                'date' => $this->input->post('date'),
+                'title' => $this->input->post('title'),
+                'description' => $this->input->post('description'),
+                'wish_img' => $data['upload_data']['file_name']
                 
-            // ];
+            ];
 
-            // $this->load->model('WishlistModel');
-            // $this->WishlistModel->insert_data($wishlist_datas);
+            $this->load->model('WishlistModel');
+            $this->WishlistModel->insert_data($wishlist_datas);
             redirect(base_url('home'));
         }
         
