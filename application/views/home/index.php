@@ -29,7 +29,7 @@
                                 <td> <?=$wd->title; ?></td>
                                 <td> <?=$wd->description; ?></td>
                                 <td><a href="<?php echo base_url('home/edit/'.$wd->id) ?>" class="btn btn-primary">Edit</a>
-                                    <a href="#" class="btn btn-danger">Delete</a>
+                                    <a href="<?php echo base_url('home/delete/'.$wd->id) ?>" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                             <?php endforeach; ?>

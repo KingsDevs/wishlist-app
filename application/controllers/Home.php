@@ -61,4 +61,12 @@ class Home extends CI_Controller
         redirect(base_url('home'));
     }
 
+    public function delete_data($id)
+    {
+        $this->load->model('WishlistModel');
+        $this->WishlistModel->delete_data($id);
+
+        redirect(base_url('home'));
+    }
+
 }

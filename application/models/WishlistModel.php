@@ -26,4 +26,9 @@ class WishlistModel extends CI_Model
         return $this->db->update('wishlist', $wishlist_datas);
     }
 
+    public function delete_data($id)
+    {
+        return $this->db->delete('wishlist', ['id' => $id]);
+    }
+
 }
