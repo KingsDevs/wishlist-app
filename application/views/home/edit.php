@@ -24,6 +24,14 @@
                             <label for="">Desription</label>
                             <textarea name="description" id="" cols="30" rows="10" class="form-control"><?= $wishlist->description?></textarea>
                         </div>
+                        <div class="form-group">
+                            <br>
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">Add Image</label>
+                                <input class="form-control" type="file" id="formFile" name="wish_img" required>
+                            </div>
+                        </div>
+                        <br>
                         <button type="submit" class="btn btn-primary float-start" placeholder="Your description(Optional)">Update</button>
                     </div>
                     
