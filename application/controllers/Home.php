@@ -66,6 +66,7 @@ class Home extends CI_Controller
         $this->load->view('templates/header.php');
         $this->load->view('home/edit.php', $data);
         $this->load->view('templates/footer.php');
+        
     }
 
     public function update_data($id)

@@ -1,7 +1,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12 mt-4">
+        <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
                     <h6>Edit Wish
@@ -24,6 +24,7 @@
                             <label for="">Desription</label>
                             <textarea name="description" id="" cols="30" rows="10" class="form-control"><?= $wishlist->description?></textarea>
                         </div>
+                        
                         <div class="form-group">
                             <br>
                             <div class="mb-3">
@@ -34,9 +35,13 @@
                         <br>
                         <button type="submit" class="btn btn-primary float-start" placeholder="Your description(Optional)">Update</button>
                     </div>
-                    
                 </form>
+
+
             </div>
+        </div>
+        <div class="col-6 col-md-4">
+            <img src="<?php echo "/uploads/images/".$wishlist->wish_img ?>" class="img-thumbnail" alt="...">
         </div>
     </div>
 

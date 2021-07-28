@@ -23,9 +23,9 @@
                 background-position: 0% 50%;
             }
         }
-        .label
+        #navi
         {
-            margin-top: 3em;
+            background-color: darkslategrey;
         }
         
     </style>
@@ -33,8 +33,9 @@
     <title>Wishlist App</title>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light" style="background-color: #e3f2fd;">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Wishlist App</a>
     </div>
     </nav>
+    <br>
