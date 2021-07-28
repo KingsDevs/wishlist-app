@@ -71,22 +71,51 @@ class Home extends CI_Controller
 
     public function update_data($id)
     {
-        $wishlist_datas =
-        [
-            'date' => $this->input->post('date'),
-            'title' => $this->input->post('title'),
-            'description' => $this->input->post('description')
-        ];
+        
+        $config['upload_path']          = './uploads/images';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['max_size']             = 0;
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
+        
+        $this->load->library('upload', $config);
+        
+        if ( ! $this->upload->do_upload('wish_img'))
+        {
+            $error = array('error' => $this->upload->display_errors());
+            echo $error['error'];
+            echo $this->input->post('def_wish_img');
+            //redirect(base_url('home/edit/'.$id));
 
-        $this->load->model('WishlistModel');
-        $this->WishlistModel->update_data($id, $wishlist_datas);
+        }
+        else
+        {
+            
+            unlink("./uploads/images/".$this->input->post('def_wish_img'));
+            $data = array('upload_data' => $this->upload->data());
+            $wishlist_datas =
+            [
+                'date' => $this->input->post('date'),
+                'title' => $this->input->post('title'),
+                'description' => $this->input->post('description'),
+                'wish_img' => $data['upload_data']['file_name']
+                
+            ];
 
-        redirect(base_url('home'));
+            $this->load->model('WishlistModel');
+            $this->WishlistModel->update_data($id, $wishlist_datas);
+            redirect(base_url('home'));
+        }
+
+        
     }
 
     public function delete_data($id)
     {
         $this->load->model('WishlistModel');
+        $data['wishlist'] = $this->WishlistModel->edit_data($id);
+        echo $data['wishlist']->wish_img;
+        unlink("./uploads/images/".$data['wishlist']->wish_img); 
         $this->WishlistModel->delete_data($id);
 
         redirect(base_url('home'));

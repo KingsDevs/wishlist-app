@@ -8,7 +8,7 @@
                         <a href="<?php echo base_url('home') ?>" class="btn btn-danger float-end">Back</a>
                     </h6>
                 </div>
-                <form action="<?php echo base_url('home/edit/'.$wishlist->id.'/update') ?>" method="POST">
+                <form action="<?php echo base_url('home/edit/'.$wishlist->id.'/update') ?>" method="POST" enctype="multipart/form-data">
                     <div class="card-body">
                         <div class="form-group">
                             <label for="">Date</label>
@@ -33,6 +33,7 @@
                             </div>
                         </div>
                         <br>
+                        <input type="text" name="def_wish_img" value="<?= $wishlist->wish_img?>" hidden>
                         <button type="submit" class="btn btn-primary float-start" placeholder="Your description(Optional)">Update</button>
                     </div>
                 </form>
